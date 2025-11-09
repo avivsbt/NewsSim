@@ -1,6 +1,5 @@
 import type { NewsItem, Language } from '../types/NewsItem';
-
-const API_BASE_URL = 'http://ps001.ps.fog.taboolasyndication.com:3001/api/topNewsItemsSimilarity';
+import { API_BASE_URL, ERROR_MESSAGES } from '../constants';
 
 export async function getTopNewsItems(language: Language = 'en', signal?: AbortSignal): Promise<NewsItem[]> {
   try {
@@ -10,13 +9,13 @@ export async function getTopNewsItems(language: Language = 'en', signal?: AbortS
     );
 
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      throw new Error(ERROR_MESSAGES.HTTP_ERROR(response.status));
     }
 
     const data = await response.json();
     
     if (!Array.isArray(data)) {
-      throw new Error('Invalid response format: expected array');
+      throw new Error(ERROR_MESSAGES.INVALID_RESPONSE);
     }
     
     return data.map((item: any): NewsItem => ({
