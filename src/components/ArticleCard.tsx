@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import type { NewsItem } from '../types/NewsItem';
 import { formatDate, toPercentage } from '../utils/articleUtils';
 import { PLACEHOLDER_IMAGE_URL } from '../constants';
@@ -8,7 +9,7 @@ interface ArticleCardProps {
   similarityScore?: number | null;
   duplicateCount?: number;
   maxSimilarity?: number;
-  onDuplicatesRender?: () => React.ReactNode;
+  onDuplicatesRender?: () => ReactNode;
   onClick?: () => void;
 }
 
