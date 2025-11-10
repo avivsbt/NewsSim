@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import type { NewsItem, Language } from '../types/NewsItem';
+import type { NewsItem, Language } from '../types';
 import { getTopNewsItems } from '../services/newsApi';
 import { ERROR_MESSAGES } from '../constants';
 

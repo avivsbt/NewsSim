@@ -1,4 +1,4 @@
-import type { NewsItem } from '../types/NewsItem';
+import type { NewsItem } from '../types';
 
 /**
  * Formats a date string to a localized date format

@@ -1,4 +1,4 @@
-import type { Language } from '../types/NewsItem';
+import type { Language } from '../types';
 import LanguageSelector from './LanguageSelector';
 
 interface PageHeaderProps {

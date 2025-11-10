@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import type { NewsItem } from '../types/NewsItem';
+import type { NewsItem } from '../types';
 import { formatDate, toPercentage } from '../utils/articleUtils';
 import { PLACEHOLDER_IMAGE_URL } from '../constants';
 

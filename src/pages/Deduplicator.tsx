@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../App.css';
-import type { NewsItem, Language } from '../types/NewsItem';
+import type { NewsItem, Language } from '../types';
 import { useFetchNews } from '../hooks/useFetchNews';
 import { getArticleById, toPercentage } from '../utils/articleUtils';
 import {

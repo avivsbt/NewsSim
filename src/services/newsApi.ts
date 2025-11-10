@@ -1,4 +1,4 @@
-import type { NewsItem, Language } from '../types/NewsItem';
+import type { NewsItem, Language } from '../types';
 import { API_BASE_URL, ERROR_MESSAGES } from '../constants';
 
 export async function getTopNewsItems(language: Language = 'en', signal?: AbortSignal): Promise<NewsItem[]> {

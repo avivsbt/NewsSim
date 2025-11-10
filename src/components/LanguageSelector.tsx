@@ -1,4 +1,4 @@
-import type { Language } from '../types/NewsItem';
+import type { Language } from '../types';
 
 interface LanguageSelectorProps {
   language: Language;

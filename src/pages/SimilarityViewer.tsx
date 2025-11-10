@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../App.css';
-import type { Language } from '../types/NewsItem';
+import type { Language } from '../types';
 import { useFetchNews } from '../hooks/useFetchNews';
 import { getSimilarityScore, toPercentage } from '../utils/articleUtils';
 import { DEFAULT_LANGUAGE, DEFAULT_SIMILARITY_THRESHOLD } from '../constants';
