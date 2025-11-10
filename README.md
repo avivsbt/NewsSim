@@ -27,7 +27,7 @@ A modern React + TypeScript application for analyzing and comparing news article
 
 ```bash
 # Install dependencies
-npm install
+npm ci
 ```
 
 ### Development
