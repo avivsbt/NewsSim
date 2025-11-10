@@ -1,6 +1,16 @@
 import type { NewsItem, Language } from '../types/NewsItem';
 import { API_BASE_URL, ERROR_MESSAGES } from '../constants';
 
+interface RawNewsItem {
+  id?: string | number;
+  title?: string;
+  publisher_name?: string;
+  publish_date?: string;
+  thumbnail_url?: string;
+  url?: string;
+  similarity_map?: Record<string, number>;
+}
+
 export async function getTopNewsItems(language: Language = 'en', signal?: AbortSignal): Promise<NewsItem[]> {
   try {
     const response = await fetch(
@@ -18,7 +28,7 @@ export async function getTopNewsItems(language: Language = 'en', signal?: AbortS
       throw new Error(ERROR_MESSAGES.INVALID_RESPONSE);
     }
     
-    return data.map((item: any): NewsItem => ({
+    return data.map((item: RawNewsItem): NewsItem => ({
       id: String(item.id || ''),
       title: item.title || 'Untitled',
       publisher_name: item.publisher_name || 'Unknown',
