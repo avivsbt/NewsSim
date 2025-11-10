@@ -1,15 +1,5 @@
-import type { NewsItem, Language } from '../types/NewsItem';
+import type { NewsItem, RawNewsItem, Language } from '../types/NewsItem';
 import { API_BASE_URL, ERROR_MESSAGES } from '../constants';
-
-interface RawNewsItem {
-  id?: string | number;
-  title?: string;
-  publisher_name?: string;
-  publish_date?: string;
-  thumbnail_url?: string;
-  url?: string;
-  similarity_map?: Record<string, number>;
-}
 
 export async function getTopNewsItems(language: Language = 'en', signal?: AbortSignal): Promise<NewsItem[]> {
   try {
