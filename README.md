@@ -78,3 +78,4 @@ NewsSimilarityEngine/
 ## License
 
 MIT
+# NewsSim
