@@ -21,10 +21,10 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm' # <-- הוספתי הפעלת מטמון
+        cache: 'npm'
 
     - name: Install Dependencies
-      run: npm ci # <-- שלב התקנה נפרד עם 'npm ci'
+      run: npm install
 
     - name: Build with Webpack
-      run: npx webpack # <-- שלב בנייה נפרד
+      run: npx webpack
