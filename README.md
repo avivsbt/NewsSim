@@ -11,30 +11,31 @@ A modern React + TypeScript application for analyzing and comparing news article
 
 ## Tech Stack
 
-- React 19.1.1
+- React 19.2.0
 - TypeScript 5.9.3
-- Vite 7.1.7
+- Vite 7.2.2
+- pnpm (package manager)
 - ESLint
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (version 16 or higher)
-- npm or yarn
+- Node.js (version 20 or higher)
+- pnpm (install with `npm install -g pnpm`)
 
 ### Installation
 
 ```bash
 # Install dependencies
-npm ci
+pnpm install
 ```
 
 ### Development
 
 ```bash
 # Start development server
-npm run dev
+pnpm run dev
 ```
 
 The application will be available at `http://localhost:5173`
@@ -43,14 +44,14 @@ The application will be available at `http://localhost:5173`
 
 ```bash
 # Build for production
-npm run build
+pnpm run build
 ```
 
 ### Preview
 
 ```bash
 # Preview production build
-npm run preview
+pnpm run preview
 ```
 
 ## Project Structure
@@ -70,10 +71,10 @@ NewsSimilarityEngine/
 
 ## Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run lint` - Run ESLint
-- `npm run preview` - Preview production build
+- `pnpm run dev` - Start development server
+- `pnpm run build` - Build for production
+- `pnpm run lint` - Run ESLint
+- `pnpm run preview` - Preview production build
 
 ## License
 
